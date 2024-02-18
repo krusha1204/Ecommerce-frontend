@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    <title>Document</title>                       
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font 
+awesome.min.css'>                                            
+
+    <style>
+        body{
+            background-color: rgb(247, 247, 213);
+            background-attachment: fixed;
+            width: 100%;
+        }
+        #header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 80px;
+            background: #E3E6F3;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            z-index: 999;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+        #navbar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #navbar li{
+            list-style: none;
+            padding: 0 20px;
+        }
+        #navbar li a{
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+            transition: 0.3s ease;
+        }
+        #navbar li a:hover, 
+        #navbar li a.active{
+            color: blue;
+        }
+        button.normal{
+            font-size: 14px;
+            font-weight: 600;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+        }
+        button.white{
+            font-size: 13px;
+            font-weight: 600;
+            padding: 11px 18px;
+            color: #ffff;
+            background-color: transparent;
+            cursor: pointer;
+            border: 1px solid #fff;
+            outline: none;
+            transition: 0.2s;
+        }
+        #hero{
+            background-image: url(Images/Background.jpg);
+            height: 60vh;
+            width: 70%;
+            background-size: cover;
+            background-position: top 25% right 0;
+            padding: 0 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-left: 250px;
+            margin-top: 60px;
+        }
+        #hero h4{
+            padding-bottom: 15px;
+            color: #E3E6F3;
+        }
+        #hero h1{
+            color: blue;
+        }
+        #hero button{
+            background-color: yellowgreen;
+            border: 0;
+            color: rgb(45, 4, 82);
+            padding: 14px 80px 14px 65px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        h6{
+            font-weight: 700;
+            font-size: 12px;
+        }
+        p{
+            font-size: 16px;
+            color: #465b52;
+            margin: 15px 0 20px 0;
+        }
+        .section-p1{
+            padding: 20px 40px;
+        }
+        .section-m1{
+            margin: 20px 0;
+        }
+        #feature{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #feature .fe-box{
+            width: 180px;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+            border: 1px solid #cce7d0;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        #feature .fe-box:hover{
+            box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+        }
+        #feature .fe-box h6{
+            display: inline-block;
+            padding: 9px 8px 6px 8px;
+            line-height: 1;
+            border-radius: 4px;
+            color: blue;
+            background-color: #fddde4;
+        }
+        #feature .fe-box img{
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        #feature .fe-box:nth-child(1) h6{
+            background-color: rgb(194, 194, 194);
+        }
+        #feature .fe-box:nth-child(2) h6{
+            background-color: rgb(212, 166, 188);
+        }
+        #feature .fe-box:nth-child(3) h6{
+            background-color: rgb(202, 250, 130);
+        }
+        #feature .fe-box:nth-child(4) h6{
+            background-color: #cce7d0;
+        }
+        #feature .fe-box:nth-child(5) h6{
+            background-color: rgb(253, 130, 130);
+        }
+        #feature .fe-box:nth-child(6) h6{
+            background-color: ;
+        }
+        #feature .fe-box:nth-child(7) h6{
+            background-color: rgb(241, 241, 58);
+        }
+        #product1{
+            text-align: center;
+        }
+        #product1 .pro{
+            width: 22%;
+            min-width: 250px;
+            padding: 6px 16px;
+            border: 1px solid #cce7d0;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+            margin: 12px 0;
+        }
+        #product1 .pro:hover{
+            box-shadow: 20px 20px 30px rgba(0,0,0,0.03);
+
+        }
+        #product1 .pro img{
+            width: 100%;
+            border-radius: 20px;
+        }
+        #product1 .pro .des{
+            text-align: start;
+            padding: 10px 0;
+        }
+        #product1 .pro .des span{
+            color: #606063;
+            font-size: 12px;
+        }
+        #product1 .pro .des h5{
+            padding-top: 7px;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+        #product1 .pro .des h4{
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #088178;
+        }
+        #product1 .pro-container{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+        #banner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background-image: url("Images/Banner.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 40vh;
+        }
+        #banner h4{
+            color: #fff;
+            font-size: 16px;
+        }
+        #banner h2{
+            color: #fff;
+            font-size: 30px;
+            padding: 10px 0;
+        }
+        #sm-banner .banner-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-image: url("Images/backgorund_clothing.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-width: 730px;
+            height: 50vh;
+            padding: 30px;
+        }
+        #sm-banner{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        #sm-banner h4{
+            color: #fff;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        #sm-banner h2{
+            color: #3d2727;
+            font-size: 28px;
+            font-weight: 800;
+        }
+        #sm-banner span{
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            padding-bottom: 15px;
+        }
+        #sm-banner .banner-box:hover button{
+            background: #550881;
+            border: 1px solid #550881;
+        }
+        #sm-banner .banner-box2:hover button{
+            background: #550881;
+            border: 1px solid #550881;
+        }
+        #sm-banner .banner-box2{
+            background-image: url("Images/backgorund_electronics.jpg");
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-width: 730px;
+            height: 50vh;
+            padding: 30px;
+        }
+        #banner3 .banner-box{
+            background-image: url("Images/winter_collection.jpg");
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-width: 30pt;
+            height: 30vh;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        #banner3 .banner-box2{
+            background-image: url("Images/spring_footwear.jpg");
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-width: 30pt;
+            height: 30vh;
+            padding: 30px;
+            margin-bottom: 20px;
+            
+        }
+        #banner3 .banner-box3{
+            background-image: url("Images/furniture.jpg");
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-width: 30pt;
+            height: 30vh;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        #banner3 .banner-box4{
+            background-image: url("Images/electronics.jpg");
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-width: 30pt;
+            height: 30vh;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        #banner3 h2{
+            color: #fff;
+            font-weight: 900;
+            font-size: 22px;
+
+        }
+        #banner3 h3{
+            color: #eb1c1c;
+            font-weight: 800;
+            font-size: 15px;
+            
+        }
+        #banner3{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 80px;
+        }
+        #newsletter{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            background-image: url("Images/");
+            background-repeat: no-repeat;
+            background-position: 20% 30%;
+            background-color: #143b72;
+        }
+        #newsletter h4{
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+        }
+        #newsletter p{
+            font-size: 14px;
+            font-weight: 600;
+            color: #818ea0;
+        }
+        #newsletter p span{
+            font-size: 14px;
+            font-weight: 600;
+            color: #e4cc61;
+        }
+        #newsletter input{
+            height: 5rem;
+            padding: 0 1.25em;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid transparent;
+            outline: none;
+            border-radius: 4px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        #newsletter button{
+            background-color: #4f0b58;
+            color: #fff;
+            white-space: nowrap;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        #newsletter .form{
+            display: flex;
+            width: 40%;
+        }
+        footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        footer .col{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        footer .logo{
+            margin-bottom: 5px;
+        }
+        footer h4{
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+        footer p{
+            font-size: 13px;
+            margin: 0 0 8px 0;
+        }
+        footer a{
+            font-size: 13px;
+            text-decoration: none;
+            color: #222;
+            margin-bottom: 5px;
+        }
+        footer .follow{
+            margin-top: 20px;
+        }
+        footer .follow i{
+            color: #465b52;
+            padding-right: 4px;
+            cursor: pointer;
+        }
+        footer .install .row img{
+            border: 1px solid #088178;
+            border-radius: 6px;
+        }
+        footer .install img{
+            margin: 10px 0 15px 0;
+        }
+        footer .follow i:hover,
+        footer a:hover{
+            color: #088178;
+        }
+        #hero button:hover{
+            background-color: #d38826;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="Images/logo.jpg" alt="" class="logo" style="height: 50px; width: 100px; border-radius: 10px;"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="#">shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About_us</a></li>
+                <li><a href="#">Contact_us</a></li>
+                <li><a href="#"><i class="fa fa-shopping-basket"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="hero">
+        <h4>Trade-in-offer</h4>
+        <h2 style="color: #E3E6F3;">Super value deals</h2>
+        <h1>On all Products</h1>
+        <p style="color: #E3E6F3;">Save more with coupons & up to 70% off!</p>
+        <button>Shop Now</button>
+    </section>
+
+    <section class="section-p1" id="feature">
+        <div class="fe-box">
+            <img src="Images/free-shipping.jpg" style="width: 90%; height: 100px; border-radius: 10px;"/>
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="Images/order.jpg" style="width: 90%; height: 100px; border-radius: 10px;"/>
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="Images/save-money.jpg" style="width: 90%; height: 100px; border-radius: 10px;"/>
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="Images/payment.jpg" style="width: 90%; height: 100px; border-radius: 10px;"/>
+            <h6>payment</h6>
+        </div>
+        <div class="fe-box">
+            <img src="Images/support.jpg" style="width: 90%; height: 100px; border-radius: 10px;"/>
+            <h6>24/7 Support</h6>
+        </div>
+        <div class="fe-box">
+            <img src="Images/happy-sell.jpg" style="width: 90%; height: 100px; border-radius: 10px;"/>
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="Images/promotion.jpg" style="width: 90%; height: 100px; border-radius: 10px;"/>
+            <h6>promotion</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1" class="">
+        <h2>Featured Products</h2>
+        <p>New Collections</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="Images/featured_lap.jpg" alt="" style="height: 270px; width: 100%; padding-top: 10px; padding-bottom: 20px;">
+                <div class="des">
+                    <span>Dell inspiron</span>
+                    <h5> Dell Inspiron 17 7000 2-in-1 Laptop 17.3&#34; QHD Touch-Screen 11th Gen Intel Core i7</h5>
+                    <h4>Rs.90,000</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="Images/featured_clothing.jpg" alt="" style="height: 300px;">
+                <div class="des">
+                    <span>Shannon Fashion</span>
+                    <h5>Shannon Fashion men printed casual black shirt</h5>
+                    <h4>Rs.499</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="Images/featureed_shoes.jpg" alt="" style="height: 300px;">
+                <div class="des">
+                    <span>Sneakers</span>
+                    <h5>Roamra Men sneakers casual shoes for men</h5>
+                    <h4>Rs.549</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="Images/featured_furniture.jpg" alt="" style="height: 300px;">
+                <div class="des">
+                    <span>Duroflex</span>
+                    <h5>Avalon Grey Fabric Recline</h5>
+                    <h4>Rs.16,999</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="banner" class="section-m1">
+        <h4>Repair Service</h4>
+        <h2>Up to <span>70% off</span> All Accessories</h2>
+        <button>Explore More</button>
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Crazy Deals</h4>
+            <h2>buy 1 get 1 free</h2>
+            <span>The best classic dress is on sale</span>
+            <button class="white">Learn More</button>
+        </div>
+        <div class="banner-box2">
+            <h4>Mega Sale</h4>
+            <h2></h2>
+            <span>Mega Electronics Day <br>
+                Crazy deals on Trending Gadgets.</span>
+            <button class="white">Collection</button>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>SEASON SALE</h2>
+            <h3>Winter collection -50% OFF</h3>
+        </div>
+        <div class="banner-box2">
+            <h2>NEW FOOTWEAR COLLECTION</h2>
+            <h3>sprinG / summer</h3>
+        </div>
+        <div class="banner-box3">
+            <h2>FURNITURE SALE</h2>
+            <h3>60% OFF for this Sason.</h3>
+        </div>
+        <div class="banner-box4">
+            <h2>ELECTRONICS </h2>
+            <h3>Winter collection -50% OFF</h3>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1" class="section-m1">
+        <div class="newstext">
+            <h4>Sign Up for newsletters</h4>
+            <p>Get E-mail updates about our <Span>Special Offers.</Span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address" name="" id="">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1" style="background-color: #a6a6b4;">
+        <div class="col">
+            <img class="logo" src="Images/" alt="">
+            <h4><strong>Contact</strong></h4>
+            <p>
+                <strong>Address :</strong> 234 karve road, street 43, pune-412207
+            </p>
+            <p>
+                <strong>Phone :</strong> +91-9042383453
+            </p>
+            <p>
+                <strong>Hours :</strong>10:00 - 18:00, Mon - Fri
+            </p>
+            <div class="follow">
+                <h4>Follow us </h4>
+                <div class="icon">
+                    <a href="#" class="fa fa-linkedin" style="color: #143b72;"></a>
+                    <a href="#" class="fa fa-pinterest" style="color: #eb1c1c;"></a>
+                    <a href="#" class="fa fa-reddit" style="color: #f5880c;"></a>
+                    <a href="#" class="fa fa-facebook" style="color: blue;"></a>
+                    <a href="#" class="fa fa-instagram" style="color: rgb(247, 8, 127);"></a>
+                    <a href="#" class="fa fa-youtube" style="color: rgb(243, 90, 90);"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4><strong>About</strong></h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Informaion</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Conatact Us</a>
+        </div>
+        <div class="col">
+            <h4><strong>My Accounts</strong></h4>
+            <a href="#">sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4 style=><Strong>Payment</Strong></h4>
+            <p>Secured Payment Gateways</p>
+            <img src="Images/payment_gateways.jpg" style="height: 100px; width: 100%;" alt="">
+        </div>
+    </footer>
+
+    <div class="copyright" class="row" style="text-align: center; background-color: rgb(164, 165, 165); margin-top: 1px;padding-top: 0.1px; padding-bottom: 0.1px; color: whitesmoke;">
+        <p>&copy; 2023, xyz etc - HTML, Css Ecommerce Tempelate</p>
+    </div>
+
+</body>
+</html>
